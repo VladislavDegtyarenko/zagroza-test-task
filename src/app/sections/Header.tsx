@@ -9,7 +9,7 @@ const Header = () => {
   const [viewportWidth, setViewportWidth] = useState<number | null>(null);
 
   const handleViewportWidth = () => {
-    setViewportWidth(window.innerWidth);
+    setViewportWidth(window?.innerWidth || 0);
   };
 
   useEffect(() => {
