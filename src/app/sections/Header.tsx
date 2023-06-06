@@ -6,7 +6,7 @@ import Nav from "./components/Nav";
 import { useState, useEffect } from "react";
 
 const Header = () => {
-  const [viewportWidth, setViewportWidth] = useState<number>(0);
+  const [viewportWidth, setViewportWidth] = useState<number>(1024);
 
   const handleViewportWidth = () => {
     setViewportWidth(window?.innerWidth || 0);
