@@ -17,9 +17,9 @@ const Header = () => {
       handleViewportWidth();
     }
 
-    window.addEventListener("resize", handleViewportWidth);
+    window && window.addEventListener("resize", handleViewportWidth);
 
-    return () => window.removeEventListener("resize", handleViewportWidth);
+    return () => window && window.removeEventListener("resize", handleViewportWidth);
   }, []);
   return (
     <header className="fixed w-full z-10 bg-white color-black py-4 drop-shadow-md">
