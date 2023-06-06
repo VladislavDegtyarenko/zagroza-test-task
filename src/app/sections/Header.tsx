@@ -17,7 +17,9 @@ const Header = () => {
       handleViewportWidth();
     }
 
-    window && window.addEventListener("resize", handleViewportWidth);
+    if (!window) return;
+
+    window.addEventListener("resize", handleViewportWidth);
 
     return () => window && window.removeEventListener("resize", handleViewportWidth);
   }, []);
