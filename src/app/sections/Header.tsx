@@ -6,7 +6,7 @@ import Nav from "./components/Nav";
 import { useState, useEffect } from "react";
 
 const Header = () => {
-  const [viewportWidth, setViewportWidth] = useState<number | null>(null);
+  const [viewportWidth, setViewportWidth] = useState<number>(0);
 
   const handleViewportWidth = () => {
     setViewportWidth(window?.innerWidth || 0);
@@ -28,7 +28,7 @@ const Header = () => {
       <Container>
         <div className="flex justify-between items-center">
           <LogoIcon />
-          {window.innerWidth > 991 ? <Nav /> : null}
+          {viewportWidth > 991 ? <Nav /> : null}
         </div>
       </Container>
     </header>
